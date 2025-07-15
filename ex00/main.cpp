@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 17:02:50 by cwolf             #+#    #+#             */
-/*   Updated: 2025/07/14 14:04:08 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/07/15 10:04:41 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main (void)
 	Fixed a;
 	Fixed b( a );
 	Fixed c;
-	
+
   	c = b;
 	
   	std::cout << a.getRawBits() << std::endl;
