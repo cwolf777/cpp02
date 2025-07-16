@@ -5,13 +5,103 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/15 14:04:38 by cwolf             #+#    #+#             */
-/*   Updated: 2025/07/16 19:49:11 by cwolf            ###   ########.fr       */
+/*   Created: 2025/07/16 13:01:55 by cwolf             #+#    #+#             */
+/*   Updated: 2025/07/16 19:41:57 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
+
+
+Fixed& Fixed::operator++()
+{
+	this->_fixedValue += 1;
+	return *this;
+}
+
+Fixed& Fixed::operator++(int)
+{
+	Fixed* temp(this);
+	this->_fixedValue += 1;
+	return *temp;
+}
+
+Fixed& Fixed::operator--()
+{
+	this->_fixedValue -= 1;
+	return *this;
+}
+
+Fixed& Fixed::operator--(int)
+{
+	Fixed* temp(this);
+	this->_fixedValue -= 1;
+	return *temp;
+}
+
+int Fixed::operator+(const Fixed&other) const
+{
+	return this->toInt() + other.toInt();
+};
+
+int Fixed::operator-(const Fixed&other) const
+{
+	return this->toInt() - other.toInt();
+};
+
+int Fixed::operator*(const Fixed&other) const
+{
+	return this->toInt() * other.toInt();
+};
+
+int Fixed::operator/(const Fixed&other) const
+{
+	return this->toInt() / other.toInt();
+};
+
+bool Fixed::operator<(const Fixed& other) const
+{
+	if (this->_fixedValue < other._fixedValue)
+		return (true);
+	return (false);
+};
+
+bool Fixed::operator>(const Fixed& other) const
+{
+	if (this->_fixedValue > other._fixedValue)
+		return (true);
+	return (false);
+};
+
+bool Fixed::operator>=(const Fixed& other) const
+{
+	if (this->_fixedValue >= other._fixedValue)
+		return (true);
+	return (false);
+};
+
+bool Fixed::operator<=(const Fixed& other) const
+{
+	if (this->_fixedValue <= other._fixedValue)
+		return (true);
+	return (false);
+};
+
+bool Fixed::operator==(const Fixed& other) const
+{
+	if (this->_fixedValue == other._fixedValue)
+		return (true);
+	return (false);
+};
+
+bool Fixed::operator!=(const Fixed& other) const
+{
+	if (this->_fixedValue != other._fixedValue)
+		return (true);
+	return (false);
+};
+
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed)
 {

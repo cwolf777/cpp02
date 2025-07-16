@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/15 10:10:18 by cwolf             #+#    #+#             */
-/*   Updated: 2025/07/16 13:01:28 by cwolf            ###   ########.fr       */
+/*   Created: 2025/07/16 12:52:50 by cwolf             #+#    #+#             */
+/*   Updated: 2025/07/16 19:44:47 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #include <iostream>
+#include "Fixed.hpp"
 
-class Fixed
-{
-	private:
-	int _fixedValue;
-	static const int _bits = 8;
-	
-	public:
-	Fixed();
-	Fixed(const int other);
-	Fixed(const float other);
-	Fixed(const Fixed& other);
-	Fixed& operator=(const Fixed& other);
-	~Fixed();
-	
-	int getRawBits(void) const;
-	void setRawBits(int const raw);
-	float toFloat( void ) const;
-	int toInt( void ) const;
-};
+int main( void ) 
+{ 
+	Fixed a(4.5f);
+	std::cout << ++a << std::endl;
+	++a;
+	std::cout << a << std::endl;
+	// if (b == a)
+	// 	std::cout << "Jap1" << std::endl;
+	// if (b != a)
+	// 	std::cout << "Jap2" << std::endl;
+	// if (b <= a)
+	// 	std::cout << "Jap3" << std::endl;
+	// if (b >= a)
+	// 	std::cout << "Jap4" << std::endl;
 
-std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
+	// return 0; 
+}
