@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 12:53:39 by cwolf             #+#    #+#             */
-/*   Updated: 2025/07/17 10:25:38 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/07/21 09:22:21 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ class Fixed
 
 	static const Fixed& min(const Fixed& first, const Fixed& second);
 	static const Fixed& max(const Fixed& first, const Fixed& second);
-
-	
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);

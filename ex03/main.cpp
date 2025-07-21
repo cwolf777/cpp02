@@ -6,7 +6,7 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 12:52:50 by cwolf             #+#    #+#             */
-/*   Updated: 2025/07/17 12:54:54 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/07/21 09:28:03 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int main(void)
 	Point point(5.0f, 3.0f);
 
 	if (bsp(a, b, c, point))
-		std::cout << "YES" << std::endl;
+		std::cout << "Inside" << std::endl;
 	return 0;
 }
