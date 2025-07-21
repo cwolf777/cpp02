@@ -6,13 +6,12 @@
 /*   By: cwolf <cwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 13:01:55 by cwolf             #+#    #+#             */
-/*   Updated: 2025/07/17 10:30:19 by cwolf            ###   ########.fr       */
+/*   Updated: 2025/07/21 09:16:29 by cwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
-
 
 Fixed& Fixed::min(Fixed& first, Fixed& second)
 {
@@ -42,13 +41,13 @@ const Fixed& Fixed::max(const Fixed& first, const Fixed& second)
 	return (second);
 }
 
-Fixed& Fixed::operator++() //++a
+Fixed& Fixed::operator++()
 {
 	this->_fixedValue += 1;
 	return *this;
 }
 
-Fixed Fixed::operator++(int) //a++
+Fixed Fixed::operator++(int)
 {
 	Fixed temp = *this;
 	this->_fixedValue += 1;
